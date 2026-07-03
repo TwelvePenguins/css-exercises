@@ -12,12 +12,31 @@
   background-color: rgb(163, 162, 162);
 }
 
+@keyframes drop-bounce {
+  from {
+    transform: translateY(-50%) scaleY(0%);
+  }
+
+  75% {
+    transform: translateY(0) scaleY(100%);
+  }
+
+  85% {
+    transform: translateY(1%) scaleY(102%);
+  }
+
+  to {
+    transform: translateY(0) scaleY(100%);
+  }
+}
+
 .dropdown-menu {
   list-style: none;
   padding: 0;
   margin: 0;
   background-color: rgb(99, 97, 97);
-
+  animation: drop-bounce 1000ms;
+  animation-timing-function: ease-out;
   display: none;
 }
 
